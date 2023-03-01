@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="HuoDui:war exploded">
-    <output-path>$PROJECT_DIR$/web</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/HuoDui_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -10,8 +10,8 @@
           <element id="library" level="project" name="c3p0-0.9.5.2" />
         </element>
       </element>
-      <element id="dir-copy" path="$PROJECT_DIR$/web" />
       <element id="javaee-facet-resources" facet="HuoDui/web/Web" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
     </root>
   </artifact>
 </component>

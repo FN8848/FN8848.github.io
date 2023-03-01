@@ -1,6 +1,7 @@
 package com.hd.dao;
 
 import com.hd.model.Baby;
+import com.hd.model.Comment;
 import com.hd.util.DBUtil;
 
 import java.sql.Connection;
@@ -25,8 +26,6 @@ public class BabyDao {
             pstmt.setString(3, post_title);
             pstmt.executeUpdate();
             System.out.println("收藏成功");
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("收藏失败");
@@ -50,9 +49,7 @@ public class BabyDao {
                 baby.setPost_title(rs.getString("post_title"));//帖子标题
                 babyList.add(baby);
             }
-            rs.close();
-            pstmt.close();
-            connection.close();
+//            return babyList;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -68,8 +65,6 @@ public class BabyDao {
             pstmt.setInt(1, id);
             pstmt.executeUpdate();
             System.out.println("BabyDao删除了一条收藏");
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

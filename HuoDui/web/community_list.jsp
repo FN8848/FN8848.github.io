@@ -18,15 +18,15 @@
     #community {
         margin: 0;
         padding: 0;
-        width: 230px;
-        height: 170px;
-        background-color: #3acdb5;
+        width: 150px;
+        height: 100px;
+        background-color: #337ab7;
         display: flex;
         color: #fff;
     }
 
     #community:hover {
-        background-color: #1589f6;
+        background-color: #00b2fc;
     }
 </style>
 <body>

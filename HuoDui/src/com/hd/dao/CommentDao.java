@@ -26,8 +26,6 @@ public class CommentDao {
             pstmt.setInt(3, post_id);
             pstmt.executeUpdate();
             System.out.println("PostDao评论成功");
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("PostDao评论失败");
@@ -51,9 +49,6 @@ public class CommentDao {
                 comment.setPost_id(rs.getInt("post_id"));//评论所在帖子的id
                 commentList.add(comment);
             }
-            rs.close();
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

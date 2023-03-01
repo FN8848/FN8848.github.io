@@ -13,7 +13,6 @@
     <script type="text/javascript" src="js/jquery3.6.1.min.js"></script>
     <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
     <script type="text/javascript" src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 <%
@@ -35,8 +34,7 @@
                          onclick='location=("<%=basePath%>/MyBabyDetailServlet?post_id=${baby.post_id}")'
                          style="height: 30px;font-size: 25px;line-height: 30px;margin: 5px;">
                         标题：${baby.post_title}</div>
-                    <button style="background-color: #e33d30;color:#fff;"
-                            onclick='location=("<%=basePath%>/BabyDeleteServlet?id=${baby.id}")'>
+                    <button onclick='location=("<%=basePath%>/BabyDeleteServlet?id=${baby.id}")'>
                         取消收藏
                     </button>
                 </div>

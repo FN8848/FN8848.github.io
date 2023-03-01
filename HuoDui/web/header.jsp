@@ -22,11 +22,10 @@
     .col-md-4:hover {
         background-color: #b4d5ee;
         color: #1851b1;
-
     }
 
     #header-color {
-        background-color: #3c3c3c;
+        background-color: #2f6ac3;
         color: white;
         height: 50px;
         line-height: 50px;
@@ -35,13 +34,10 @@
 </style>
 <body>
 <div class="row" id="header-color">
-
     <div class="col-md-4"
          onclick="location.href=('<%=basePath%>/IndexServlet?id=${user.id}&username=${user.username}')">首页
     </div>
-    <div class="col-md-4"
-         onclick="location.href=('<%=basePath%>/ImagesServlet')">图片分享
-    </div>
+    <div class="col-md-4" onclick='location.href=("#")'>热门</div>
     <div class="col-md-4"
          onclick='location.href=("<%=basePath%>/user_center.jsp?id=${user.id}&username=${user.username}")'>个人中心
     </div>

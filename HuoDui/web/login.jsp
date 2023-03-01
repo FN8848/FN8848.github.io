@@ -10,28 +10,28 @@
 <html>
 <head>
     <title>登录</title>
-    <script type="text/javascript" src="js/jquery3.6.1.min.js"></script>
     <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
     <script type="text/javascript" src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jQuery/jquery3.6.1.min.js"></script>
     <style>
         body {
             margin: 0;
             font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
         }
 
-        #login {
-            height: 95vh;
+        .container {
+            width: 100vw;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             background: url("https://starry-lixu.oss-cn-hangzhou.aliyuncs.com/202209141908599.jpg") fixed no-repeat;
-            background-size: cover;
+            /*background-size: cover;*/
         }
 
         .login-form {
-            margin: auto;
-            width: 400px;
-            height: 350px;
+            width: 240px;
+            height: 220px;
             display: flex;
             flex-direction: column;
             padding: 40px;
@@ -100,38 +100,37 @@
     </style>
 </head>
 <body>
-<%
+    <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 %>
+<%--header.jsp--%>
+<jsp:include page="header.jsp">
+    <jsp:param name="flag" value="1"/>
+</jsp:include>
+
+<body>
 <div class="container">
-    <%--header.jsp--%>
-    <jsp:include page="header.jsp">
-        <jsp:param name="flag" value="1"/>
-    </jsp:include>
-    <div class="row" id="login">
-        <c:if test="${username!=null}">
-            <div class="row">
-                <div class="col-md-12"><h4>${username}&nbsp;注册成功！请登录</h4></div>
-            </div>
-        </c:if>
-        <form action="<%=basePath%>/LoginServlet" class="login-form" method="post">
-            <h2>登 录</h2>
-            <input
-                    type="number"
-                    name="number"
-                    placeholder="账号"
-                    required="required"
-            />
-            <input
-                    type="password"
-                    name="password"
-                    placeholder="密码"
-                    required="required"
-            />
-            <input type="submit" value="登录">
-        </form>
-    </div>
+    <form action="/LoginServlet" class="login-form" method="post">
+        <h2>登 录</h2>
+        <input
+                type="type"
+                name="number"
+                placeholder="账号"
+                required="required"
+        />
+        <input
+                type="password"
+                name="password"
+                placeholder="密码"
+                required="required"
+        />
+        <input type="submit" value="登录">
+        <div>没有账号？<a href="register.jsp">立即注册</a></div>
+    </form>
+
+
+</div>
 </div>
 
 </body>

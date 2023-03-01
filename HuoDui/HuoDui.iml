@@ -11,27 +11,6 @@
         </webroots>
       </configuration>
     </facet>
-    <facet type="web" name="Web3">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/HuoDui/out/artifacts/HuoDui_war_exploded/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/HuoDui/out/artifacts/HuoDui_war_exploded" relative="/" />
-        </webroots>
-        <sourceRoots />
-      </configuration>
-    </facet>
-    <facet type="web" name="Web2">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/HuoDui/web/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/HuoDui/web" relative="/" />
-        </webroots>
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -42,5 +21,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.75" level="application_server_libraries" />
     <orderEntry type="library" exported="" name="c3p0-0.9.5.2" level="project" />
+    <orderEntry type="library" name="servlet-api" level="project" />
   </component>
 </module>

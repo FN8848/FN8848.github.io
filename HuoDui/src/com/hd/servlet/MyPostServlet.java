@@ -21,14 +21,12 @@ public class MyPostServlet extends HttpServlet {
 
         //接收来自 user_center.jsp 的参数: 用户id
         int user_id = Integer.parseInt(request.getParameter("id"));
-        String username = request.getParameter("username");
-        System.out.println("MyPostServlet:用户id=" + user_id + "\t用户名=" + username);
+        System.out.println("MyPostServlet:用户id=" + user_id);
 
         List<Post> postList = new PostService().selectPostListByUserId(user_id);
         System.out.println("MyPostServlet:我的帖子:\n" + postList);
 
         request.setAttribute("postList", postList);
-        request.setAttribute("username", username);
         request.getRequestDispatcher("my_post.jsp").forward(request, response);
     }
 

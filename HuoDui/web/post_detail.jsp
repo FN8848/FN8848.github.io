@@ -29,15 +29,16 @@
     <div class="row" style="background-color:#b4d5ee;padding: 15px;">
         <div class="col-md-12" id="post" style="background-color:#ffffff;margin-bottom: 30px;">
             <div class="my_post" style="margin-top: 10px;margin-bottom: 10px;background-color:#fff;">
-                <h4 style="color: #3c3c3c">作者：${post.user_username}</h4>
+                <h4>作者：${post.user_username}</h4>
                 <div class="col-md-10" style="height: 30px;font-size: 25px;line-height: 30px;margin: 5px;">
                     标题：${post.title}</div>
+                <div class="col-md-1">帖子id：${post.id}</div>
                 <c:if test="${user.username!=null}">
-                    <button class="btn-lg" style="background-color: #39d0b7;border-radius:50%;" onclick='location=("<%=basePath%>/BabyAddServlet?user_id=${user.id}&post_id=${post.id}&post_title=${post.title}")'>
+                    <button onclick='location=("<%=basePath%>/BabyAddServlet?user_id=${user.id}&post_id=${post.id}&post_title=${post.title}")' >
                         收藏
                     </button>
                 </c:if>
-                <div  class="col-md-12" style="margin: 5px;font-size: 20px">内容:${post.text}</div>
+                <div class="col-md-12" style="margin: 5px;">内容:${post.text}</div>
             </div>
         </div>
         <%-- 评论区    用户名:评论内容--%>
@@ -68,6 +69,12 @@
         </div>
     </div>
 </div>
+<script>
+    function location(){
+        alert("你点击了按钮哦");
+    }
+</script>
 
 </body>
+
 </html>

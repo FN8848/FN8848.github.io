@@ -50,9 +50,6 @@ public class PostDao {
                 post.setCommunity_id(rs.getInt("community_id"));//帖子对应的社区id
                 post.setUser_id(rs.getInt("user_id"));
             }
-            rs.close();
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -76,9 +73,6 @@ public class PostDao {
                 post.setCommunity_id(rs.getInt("community_id"));//利用帖子外键得到社区的 id
                 postList.add(post);
             }
-            rs.close();
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -103,9 +97,6 @@ public class PostDao {
                 post.setCommunity_id(rs.getInt("community_id"));//利用帖子外键得到社区的 id
                 postList.add(post);
             }
-            rs.close();
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -121,8 +112,6 @@ public class PostDao {
             pstmt.setInt(1, id);
             pstmt.executeUpdate();
             System.out.println("PostDao删除了一条帖子");
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -146,9 +135,6 @@ public class PostDao {
                 post.setCommunity_id(rs.getInt("community_id"));//社区id
                 postList.add(post);
             }
-            rs.close();
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -76,9 +76,6 @@ public class CommunityDao {
                 community.setUser_id(rs.getInt("user_id"));
                 communityList.add(community);
             }
-            rs.close();
-            pstmt.close();
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -96,8 +93,6 @@ public class CommunityDao {
             pstmt.setInt(3, user_id);
             pstmt.executeUpdate();
             System.out.println("CommunityDao:社区创建成功");
-            pstmt.close();
-            connection.close();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();

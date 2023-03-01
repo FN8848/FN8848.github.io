@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
     <script type="text/javascript" src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
     <style>
-        *{
-
-
-        }
         .send-hover:hover {
             color: #337ab7;
         }
@@ -37,16 +33,15 @@
                 <jsp:param name="flag" value="1"/>
             </jsp:include>
         </div>
-
         <%-- 发帖按钮 --%>
         <c:if test="${user.id!=null}">
             <div class="row">
 
-                <div class="col-md-10"  style="line-height: 100px;font-size: 35px;background-color:#b4d5ee;">
-                    <div style="margin-left: 260px;">欢迎进入火堆论坛</div>
+                <div class="col-md-10" style="line-height: 100px;font-size: 35px;background-color:#b4d5ee;">
+                    <span style="margin-left: 260px;">欢迎进入火堆论坛</span>
                 </div>
                 <div class="col-md-2 send-hover" id="send"
-                     style="background-color: #d0e9c6;height: 100px;display:flex;">
+                     style="background-color:#b4d5ee;height: 100px;display:flex;">
                     <div style="margin: auto;font-size: 35px;"><span>发帖</span></div>
                 </div>
             </div>
@@ -77,7 +72,6 @@
 
     </div>
 </div>
-<img style="width: 220px;height: 100px;position: absolute;top: 0px;" src="logo/img.png">
 </body>
 <script>
     $('#send').click(function () {

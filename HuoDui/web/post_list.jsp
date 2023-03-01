@@ -39,6 +39,7 @@
                     <div class="row">
                         <div class="col-md-10" style="height: 30px;font-size: 25px;line-height: 30px;margin: 5px;">
                             标题:${post.title}</div>
+                        <div class="col-md-1">帖子id:${post.id}</div>
                     </div>
                     <div class="row">
                         <div class="col-md-12" style="height: 100px;margin: 5px;">内容:${post.text}</div>
